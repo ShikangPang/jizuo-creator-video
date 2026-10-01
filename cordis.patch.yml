@@ -1,0 +1,3 @@
+- insert:
+    - id: jizuo-video
+      name: "@jizuo/video-plugin"
