@@ -1,3 +1,8 @@
 - insert:
+    - id: jizuo-video-core
+      name: "@jizuo/plugin"
+      config:
+        hostUi: native
+        chapterWorkflowEnabled: false
     - id: jizuo-video
       name: "@jizuo/video-plugin"

@@ -1,18 +1,21 @@
 {
   "name": "@jizuo/video-plugin",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./locale/*": "./locale/*"
   },
   "files": [
     "lib/*.js",
     "cordis.patch.yml",
-    "README.md"
+    "README.md",
+    "locale",
+    "icon.svg"
   ],
   "dsh": {
     "bundle": {
@@ -26,14 +29,15 @@
       ]
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "@jizuo/plugin": "https://github.com/ShikangPang/jizuo-creator-writing/releases/download/v0.3.0/jizuo-plugin-0.3.0.tgz"
+  },
   "peerDependencies": {
     "@deepseek-ai/cordis": "4.0.4",
     "react": "18.3.1",
-    "@deepseek-ai/dsh": "0.1.7-rc.1",
-    "@deepseek-ai/dsh-tools": "0.1.7-rc.1",
-    "@deepseek-ai/dsh-session": "0.1.7-rc.1",
-    "@jizuo/plugin": "0.2.1"
+    "@deepseek-ai/dsh": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-tools": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-session": "0.2.0-rc.2"
   },
   "license": "MIT",
   "engines": {
@@ -58,6 +62,14 @@
     "url": "https://github.com/ShikangPang/jizuo-creator-video.git"
   },
   "packageManager": "pnpm@11.7.0",
+  "description": "即作视频：独立视频项目、小说改编剧本与视频编辑",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "jizuo",
+    "video"
+  ],
+  "icon": "./icon.svg",
   "scripts": {
     "build": "node scripts/build.mjs",
     "typecheck": "node scripts/build.mjs typecheck",
